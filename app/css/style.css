@@ -1,0 +1,252 @@
+/* ------------------------------------------------------------ *\
+	Variables
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Fonts
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Colors
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Titles
+\* ------------------------------------------------------------ */
+/* Responsive layouts */
+/* ------------------------------------------------------------ *\
+	Mixins
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Reset
+\* ------------------------------------------------------------ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ------------------------------------------------------------ *\
+	Base
+\* ------------------------------------------------------------ */
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #505050;
+  min-width: 100%;
+  font-weight: 300;
+  background-color: #eb7d4b; }
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+a:hover {
+  text-decoration: none;
+  color: inherit; }
+
+img {
+  border: 0;
+  border: none;
+  max-width: 100%;
+  height: auto; }
+
+h1 {
+  font-size: 52px;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  margin-top: 0; }
+
+h2 {
+  font-size: 42px;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  margin-top: 0; }
+
+h3 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  margin-top: 0; }
+
+h4 {
+  font-size: 24px;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  margin-top: 0; }
+
+h5 {
+  font-size: 20px;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  margin-top: 0; }
+
+h6 {
+  font-size: 16px;
+  line-height: 1.2;
+  font-family: Arial, sans-serif;
+  margin-top: 0; }
+
+a:focus {
+  -webkit-outline-color: 0;
+  -moz-outline-color: 0;
+  -ms-outline-color: 0;
+  -o-outline-color: 0;
+  outline-color: 0;
+  -webkit-outline: 0;
+  -moz-outline: 0;
+  -ms-outline: 0;
+  -o-outline: 0;
+  outline: 0; }
+
+img {
+  border: 0;
+  border: none; }
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0; }
+  @media (max-width: 1200px) {
+    .wrapper {
+      width: auto; } }
+
+/* ------------------------------------------------------------ *\
+	header
+\* ------------------------------------------------------------ */
+.page-title {
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+  border-bottom: 3px solid #505050; }
+
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Buttons
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Sections
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Article
+\* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ *\
+	Items
+\* ------------------------------------------------------------ */
+.items {
+  font-size: 14px; }
+  .items:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .items .item {
+    float: left;
+    width: 23%;
+    margin: 1%;
+    box-sizing: border-box;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    transition: all 0.3s; }
+    .items .item:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); }
+    .items .item:nth-child(4n+1) {
+      clear: both; }
+    @media (max-width: 768px) {
+      .items .item {
+        width: 31%;
+        padding: 10px; }
+        .items .item:nth-child(4n+1) {
+          clear: none; }
+        .items .item:nth-child(3n+1) {
+          clear: both; } }
+    @media (max-width: 480px) {
+      .items .item {
+        width: 46%;
+        margin: 1% 2%; }
+        .items .item:nth-child(3n+1) {
+          clear: none; }
+        .items .item:nth-child(2n+1) {
+          clear: none; } }
+    .items .item img {
+      width: 100%;
+      height: 200px;
+      display: block; }
+      @media (max-width: 768px) {
+        .items .item img {
+          height: 160px; } }
+      @media (max-width: 480px) {
+        .items .item img {
+          height: 140px; } }
+    .items .item em {
+      font-style: italic; }
+    .items .item h5, .items .item h6 {
+      display: inline;
+      word-break: break-all; }
+      .items .item h5 a, .items .item h6 a {
+        text-decoration: underline;
+        color: #3c5499; }
+        .items .item h5 a:hover, .items .item h6 a:hover {
+          text-decoration: none; }
+    .items .item .meta {
+      padding: 10px 0; }
+
+/* ------------------------------------------------------------ *\
+	Error
+\* ------------------------------------------------------------ */
+.error {
+  display: none;
+  text-align: center;
+  padding: 10% 0; }
+  .error h2 {
+    color: red; }
+
+/* ------------------------------------------------------------ *\
+	Navigaton
+\* ------------------------------------------------------------ */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,89 @@
+/* ------------------------------------------------------------ *\
+	Items
+\* ------------------------------------------------------------ */
+
+.items {
+	@include clearfix;
+	font-size: 14px;
+	
+	.item {
+		float: left;
+		width: 23%;
+		margin: 1%;
+		box-sizing: border-box;
+		padding: 20px;
+		box-shadow: 0 0 10px rgba(0,0,0,0.3);
+		background-color: white;
+		transition: all 0.3s;
+
+		&:hover {
+			box-shadow: 0 0 20px rgba(0,0,0,0.6);
+		}
+
+		&:nth-child(4n+1) {
+			clear: both;
+		}
+
+		@include tablet-sm {
+			width: 31%;
+			padding: 10px;
+
+			&:nth-child(4n+1) {
+				clear: none;
+			}
+
+			&:nth-child(3n+1) {
+				clear: both;
+			}
+		}
+
+		@include mobile-sm {
+			width: 46%;
+			margin: 1% 2%;			
+
+			&:nth-child(3n+1) {
+				clear: none;
+			}
+
+			&:nth-child(2n+1) {
+				clear: none;
+			}
+		}
+
+		img {
+			width: 100%;
+			height: 200px;
+			display: block;
+
+			@include tablet-sm {
+				height: 160px;
+			}
+
+			@include mobile-sm {
+				height: 140px;
+			}
+		}
+
+		em {
+			font-style: italic;
+		}
+
+		h5, h6 {
+			display: inline;
+			word-break: break-all;
+
+			a {
+				text-decoration: underline;
+				color: $color-blue;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		.meta {
+			padding: 10px 0;
+		}
+	}
+}
